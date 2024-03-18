@@ -1,0 +1,75 @@
+<    color: #333;<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Loan Application Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    body {
+      background-color: #f5f5f5; /* Light gray background */
+      margin: 20px; /* Consistent margin for content */
+    }
+    h1 {
+      color: #333; /* Darker text color for heading */
+      font-size: 1.8em; /* Larger heading font size */
+    }
+    label {
+      display: block; /* Display labels on separate lines */
+      margin-bottom: 5px; /* Add space between label and input */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Loan Management System - Loan Application Form</h1>
+  </header>
+
+  <nav>
+    <a href="./home.html">Home</a>
+    <a href="./about.html">About Us</a>
+    <a href="./contact.html">Contact Us</a>
+    <a href="./services.html">Services</a>  <a href="./table.html">table</a>  <a href="./mybook.html">my book</a>  </nav>
+
+  <p>Please fill out the following form to apply for a student loan:</p>
+
+  <form action="/submit_loan_application" method="POST">
+    <label for="fname">First Name:</label>
+    <input type="text" name="fname" id="fname" required> <br>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" name="lname" id="lname" required> <br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" id="email" required> <br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  <br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" name="dob" id="dob" required> <br>
+
+    <label for="education_level">Education Level:</label>
+    <select name="education_level" id="education_level" required>
+      <option value="">Select</option>
+      <option value="high_school">High School Diploma</option>
+      <option value="associate_degree">Associate's Degree</option>
+      <option value="bachelor_degree">Bachelor's Degree</option>
+      <option value="graduate_degree">Graduate Degree</option>
+    </select> <br>
+
+    <label for="expected_graduation_date">Expected Graduation Date:</label>
+    <input type="date" name="expected_graduation_date" id="expected_graduation_date" required> <br>
+
+    <label for="loan_amount">Loan Amount Requested:</label>
+    <input type="number" name="loan_amount" id="loan_amount" min="1000" step="1000" required>  <br>
+
+    <label for="loan_purpose">Loan Purpose:</label>
+    <textarea name="loan_purpose" id="loan_purpose" rows="5" required></textarea> <br>
+
+    <input type="submit" value="Submit Application">
+  </form>
+
+</body>
+</html>
+

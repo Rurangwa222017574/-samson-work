@@ -1,0 +1,190 @@
+My book
+<html>
+<head>
+  <title>My Book</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body bgcolor="blue">
+    <p>
+      <center>
+      <ul style="list-style-type: none;  padding: 0;">
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./home.html">HOME</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./about.html">ABOUT</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./contact.html">CONTACT</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./services.html">SERVICES</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./form.html">FORM</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./table.html">TABLE</a></li>
+        <li style="display: inline; background-color:darkorange; margin-right: 10px"><a href="./book.html">MYBOOK</a></li>
+    </ul></center>
+
+  </p>
+  <h1>DATABASE AND JAVA WITH loan management system </h1>
+  <ol><h2><u><li>DATABASE</li></u></h2>
+    <p>Database name used: <b> loan management system.</b></p>
+    <ul type="square"><h3><u><i><li>Tables</li></i></u></h3>
+
+      <ol><li><b>user Table</b></li>
+
+      <p> The User table in a loan management system plays a crucial role in managing borrowers and potentially lenders (depending on the system's design). It stores essential information about the users interacting with the system.
+            </p></br>
+           <b>Attributes of user Table</b></br>
+
+    Here are the descriptions of the attributes/columns used in user table:</
+
+<p><b><i>role:</i></b>this attributes define the user access level and functionalities within the system .</br>
+
+
+<p><b><i>User_id:</i></b> This is a unique identifier for each user in the system. It's typically an auto-incrementing integer value assigned by the database system and ensures each user has a distinct record.</p></br>
+
+<p><b><i>created_at:</i></b>  This attribute stores the date and time the user record was created in the system.</p></br>
+
+<p><b><i>password</i></b>his attribute stores the user's password. However, for security reasons, it's crucial never to store passwords in plain text. Instead, the system should use a hashing algorithm  to convert the password into a scrambled value before storing it .</br></p>
+
+<p><b><i>st_id :</i></b> this attributes potentiol represent "STUDENT_ID"might be present if the system  primarily  caters to student .</br></p>
+
+      <li><b>student Table</b></li>
+
+      <p>In a student loan management system, the Student table would specifically store information related to student borrowers.This table focuses on capturing data about student borrowers who have applied for or received loans.</p> </br>
+          <b>Attributes of student Table</b></br>
+
+    Here are the descriptions of the attributes/columns used in student table:</
+
+<p><b><i>ID:</i></b> This unique identifier acts as the main reference point for each student in the system. It helps distinguish students and ensures data integrity within the database.</br>
+
+
+<p><b><i>NAME:</i></b>  This stores the student's full name for easy identification and association with loan applications .</p></br>
+
+<p><b><i>REG:</i></b> This unique identifier, potentially representing the student's registration number, allows for linking the student to their academic data and records within the university or institution. </p></br>
+
+<p><b><i>EMAIL</i></b> This captures the student's email address, which can be crucial for:.</br></p>
+
+<p><b><i> :communication</i></b> Sending important notifications related to loan applications, approvals, or updates</br></p>
+
+<p><b><i>:verification</i></b>Potentially used for verifying student identities during the loan application process or password recovery.</br></p>
+<p><b><i>:class</i></b>This attribute, potentially representing the student's academic year or program, might be included depending on the system's design Why is</br></p>
+ 
+      <li><b>status  Table</b></li>
+
+      <p>
+A status table in a loan management system can serve various purposes depending on the specific functionality it supports.</p></br>
+      <b>Attributes of status Table</b></br>
+
+    Here are the descriptions of the attributes/columns used in status table:</
+
+<p><b><i>ID:</i></b> This unique identifier acts as the main reference point for each status record in the system. It helps distinguish individual statuses and ensures data integrity.</p></br>
+
+
+<p><b><i>NAME:</i></b> This attribute captures the actual status name, which clearly describes the current state of the entity it's associated with. Examples of loan application status names might include:
+o Submitted
+o Pending Review
+o Approved
+o Rejected
+o Disbursed
+o Repayment Ongoing
+o Completed (fully repaid)  .</p></br>
+
+<p><b><i>created_at:</i></b> This timestamp records the date and time when the specific status record was created in the system. It can be useful for tracking when a particular status was assigned and potentially analyzing processing times. </p></br>
+
+<p><b><i>updated_at</i></b> This timestamp captures the date and time when the status record was last updated. This is crucial for maintaining an accurate history of status changes and identifying the latest status for each entity..</br></p>
+
+
+
+
+      <li><b>loan payement table</b></li>
+
+      <p>The Loan Payment table in a loan management system plays a crucial role in recording and tracking all the individual payments made by borrowers towards their loans. It provides a detailed record of the payment history for each loan.</p></br>
+      <b>Attributes of loan payement Table</b></br>
+
+    Here are the descriptions of the attributes/columns used in loan payement table:</
+
+<p><b><i>loan_ID:</i></b>Links the payment to a specific loan application and borrower .</br>
+
+
+<p><b><i>p_id:</i></b> Potentially a unique identifier for each individual payment record  .</p></br>
+
+<p><b><i>payement_date:</i></b>Captures the date on which the payment was made  </p></br>
+
+<p><b><i>payement_ammount</i></b>Records the specific amount of money received as part of the payment. .</br></p>
+
+<p><b><i>user_id</i></b>Links the payment to the user who made it (potentially a student, guarantor, or another authorized individual). .</br></p>
+
+      <li><b>loan application table</b></li>
+
+      <p>In a loan management system, the Loan Application table holds vital information about loan applications submitted by borrowers. This table serves as the starting point for the loan processing lifecycle.This table captures details about each loan application submitted by a borrower within the system.
+                    
+<b>Attributes of loan  application Table</b></br>
+
+    Here are the descriptions of the attributes/columns used in loan application table:</
+
+<p><b><i>ID:</i></b> This unique identifier acts as the main reference point for each loan application in the system, ensuring data integrity and easy retrieval of specific applications.</p></br>
+<
+
+
+<p><b><i>description:</i></b> This attribute allows students to briefly describe the purpose of their loan request. It provides context for the loan officer and can be helpful for decision-making and record-keeping  .</p></br>
+
+<p><b><i>ammount:</i></b>  This captures the total amount of money the student is requesting to borrow. It's a crucial piece of information for both the student and the loan officer.</p></br>
+
+<p><b><i>status</i></b> This attribute reflects the current stage of the loan application process. Examples of common loan application statuses might include:Submitted
+o Pending Review
+o Approved
+o Rejected.</br></p>
+
+ <p><b><i>pay_status</i></b>This attribute specifically reflects the status ofloan repayments, not the application itself. It might show whether the loan is:
+o Not yet disbursed (payment not applicable)
+o In repayment (ongoing payments)
+o Fully repaid
+o Delinquent (missed payments) .</br></p>
+ <p><b><i>date</i></b> This timestamp captures the date and time when the loan application was submitted. It's helpful for tracking application timelines and processing efficiency.</br></p>
+ <p><b><i>user_id</i></b>This foreign key links the application to the user who submitted it, typically a student, but could also be another authorized individual .</br></p>
+  <p><b><i>st_id</i></b>This foreign key, potentially representing "student ID," might be present if the system primarily caters to students. It links the application to the specific student's record in the student table. .</br></p>
+        </ul>
+    <h2><u><li>JAVA</li></u></h2>
+    
+    <ul type="square"><h3><u><i><li>Description</li></i></u></h3>
+
+        <b>Introduction</b><br>
+ <p>Loan management systems are web-based platforms designed to automate and streamline the entire loan process, from application to repayment, for both lenders and borrowers.</p><br>
+ 
+  <b>Tools used to develop this system in java programming</b><br>
+
+<p><b>Eclipse IDE:</b> an integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment. It is the second-most-popular IDE for Java development, and was the most popular. </p><br>
+
+<p><b>JAR stands for Java Archive:</b>  Pre-built Libraries: Your loan management system might utilize pre-built Java libraries for database access, user authentication, or security features. These libraries would likely be included within JAR files and referenced by your program.
+Custom Functionality: If you have developed specific functionalities within your loan management system ( custom loan calculation logic), those would also be part of the JAR file containing your program's code.. </p><br>      
+
+                    <h3><u><i><li>Forms and Images</li></i></u></h3>
+
+<b>student Form</b></br>
+<img src="student form.png" width=900 height=200><br><br><br><br><br>
+
+<b><i>student login</i></b></br>
+<img src="student login.png" width=900 height=200><br><br><br><br><br>
+
+<b><i>reportForm</i></b></br>
+<img src="report.png" width=900 height=200><br><br><br><br><br>
+
+<b><i>comment form</i></b></br>
+<img src="comment.png" width=900 height=200><br><br><br><br><br>
+
+<b><i>loan requestForm</i></b></br>
+<img src="loan request.png" width=900 height=200><br><br><br><br><br>
+
+
+
+
+
+
+
+        </ul>
+    
+  </ol>
+  <marquee><u><i><h2 style="color: white;">Prepared and disigned By</i></u>:  RURANGWA samson</h2></marquee>
+  </body>
+  </html>
+
+
+
+
+
+
